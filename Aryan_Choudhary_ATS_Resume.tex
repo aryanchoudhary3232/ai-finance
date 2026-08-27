@@ -1,0 +1,107 @@
+% ATS-friendly resume for Aryan Choudhary
+% Compile on Overleaf with pdfLaTeX
+
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+\pagestyle{empty}
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\urlstyle{same}
+\def\UrlBreaks{\do\/\do-\do\_}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{5pt}
+
+\newcommand{\resumeItem}[1]{\item\small #1}
+\newcommand{\resumeSubheading}[4]{%
+  \textbf{#1} \hfill \textbf{\small #2}\\
+  \textit{\small #3} \hfill \textit{\small #4}
+}
+\newcommand{\resumeProject}[3]{%
+  \textbf{#1} $|$ \small #2 \hfill \small #3
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE \textbf{Aryan Choudhary}}\\
+  \vspace{3pt}
+  \small
+  Sri City, Andhra Pradesh, India $|$
+  \href{mailto:aryanchoudhary3232@gmail.com}{aryanchoudhary3232@gmail.com} $|$
+  +91-8949597653 $|$
+  \href{https://www.linkedin.com/in/aryan-choudhary-933587290/}{linkedin.com/in/aryan-choudhary-933587290} $|$
+  \href{https://github.com/aryanchoudhary3232}{github.com/aryanchoudhary3232}
+\end{center}
+
+\section{Professional Summary}
+\small
+Computer Science undergraduate and full-stack developer with hands-on experience building production-style web applications using React.js, Next.js, TypeScript, Node.js, Express.js, REST APIs, Prisma ORM, PostgreSQL, MongoDB, authentication, dashboards, and AI integrations. Strong foundation in data structures, algorithms, object-oriented programming, database management systems, operating systems, and computer networks.
+
+\section{Education}
+\resumeSubheading
+  {Indian Institute of Information Technology Sri City (IIIT Sri City)}
+  {2023--2027}
+  {B.Tech in Computer Science and Engineering; CGPA: 8.29/10.0}
+  {Sri City, India}
+
+\section{Experience}
+\resumeSubheading
+  {Software Development Intern}
+  {Mar 2025--May 2025}
+  {E-NEST Skill, EdTech Platform}
+  {Remote}
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+  \resumeItem{Built and maintained admin panel modules for course catalogs, mentor listings, exam-prep content, learner records, and platform analytics.}
+  \resumeItem{Implemented CRUD workflows, role-based access flows, form validation, searchable tables, filters, and status management for Skill Connect, Expert Connect, and Immersion Program features.}
+  \resumeItem{Integrated frontend interfaces with REST APIs and improved responsive public website pages for career pathways, mentor discovery, and dynamic program listings.}
+  \resumeItem{Collaborated on bug fixes, backend API integration, deployment support, and UI improvements across admin and consumer-facing surfaces.}
+\end{itemize}
+
+\section{Projects}
+\resumeProject
+  {Job Portal - Full-Stack Recruitment Platform}
+  {Next.js, TypeScript, React, Redux Toolkit, Node.js, Express.js, MongoDB, Prisma, JWT, OAuth, Docker}
+  {\href{https://job-portal-frontend-bhkj.onrender.com}{Live Demo}}
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+  \resumeItem{Built a full-stack recruitment platform with separate student, recruiter, staff, and admin dashboards for job search, job posting, applications, recruiter verification, and hiring analytics.}
+  \resumeItem{Designed a microservices-style backend with API gateway, auth service, user service, job service, application service, and admin service using Node.js, Express.js, REST APIs, Zod validation, and role-based authorization.}
+  \resumeItem{Implemented authentication workflows with JWT, Google OAuth, GitHub OAuth, email OTP verification, SMS OTP support, protected routes, and role-specific access control.}
+  \resumeItem{Developed application tracking features including student applications, recruiter applicant review, hiring pipeline stages, shortlisted candidates, selected candidates, rejected candidates, and staff analytics.}
+  \resumeItem{Added AI career features including resume ATS scanning, skill gap analysis, mock interview feedback, candidate ranking, job description generation, and hiring insights.}
+\end{itemize}
+
+\resumeProject
+  {AI Finance Platform - Personal Finance and Budgeting Application}
+  {Next.js, React, JavaScript, Tailwind CSS, Clerk, Prisma ORM, PostgreSQL, Gemini API, Inngest, ArcJet, Resend}
+  {\href{https://ai-finance-ruby.vercel.app/}{Live Demo}}
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+  \resumeItem{Built an AI-powered personal finance platform for managing accounts, income, expenses, budgets, recurring transactions, transaction history, and category-wise spending analysis.}
+  \resumeItem{Implemented secure user authentication with Clerk and persistent financial data models using Prisma ORM, PostgreSQL, relational schemas, indexed queries, and server actions.}
+  \resumeItem{Created interactive dashboards with account cards, budget progress, transaction overviews, expense charts, filters, sorting, and financial trend visualization using Recharts.}
+  \resumeItem{Integrated Google Gemini API to scan receipt images, extract merchant, amount, date, description, and category data, and auto-fill transaction forms from uploaded receipt files.}
+  \resumeItem{Added production-focused features including ArcJet rate limiting, Inngest background jobs, Resend email workflows, cache revalidation, responsive UI, and Vercel deployment.}
+\end{itemize}
+
+\section{Technical Skills}
+\begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+  \resumeItem{\textbf{Languages:} C++, JavaScript, TypeScript, Python, SQL, HTML5, CSS3}
+  \resumeItem{\textbf{Frontend:} React.js, Next.js, Redux Toolkit, Tailwind CSS, Shadcn UI, Responsive Web Design}
+  \resumeItem{\textbf{Backend:} Node.js, Express.js, FastAPI, REST APIs, Microservices, Server Actions, Authentication, Authorization}
+  \resumeItem{\textbf{Databases and ORM:} PostgreSQL, MongoDB, Prisma ORM, Database Schema Design, Query Optimization}
+  \resumeItem{\textbf{Cloud and Tools:} Git, GitHub, Docker, Kubernetes, AWS, Vercel, Render, Postman, Linux, CI/CD}
+  \resumeItem{\textbf{AI and Automation:} Google Gemini API, LLM Integration, AI Resume Screening, Receipt Scanning, Background Jobs}
+  \resumeItem{\textbf{Core CS:} Data Structures and Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks}
+\end{itemize}
+
+\end{document}
