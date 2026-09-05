@@ -8,7 +8,8 @@
 \usepackage{lmodern}
 \usepackage[margin=0.55in]{geometry}
 \usepackage{xcolor}
-\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\definecolor{linkblue}{RGB}{0,78,168}
+\usepackage[colorlinks=true, urlcolor=linkblue, linkcolor=linkblue]{hyperref}
 \usepackage{titlesec}
 \usepackage{enumitem}
 
@@ -30,11 +31,14 @@
 \newcommand{\resumeProject}[3]{%
   \textbf{#1} $|$ \small #2 \hfill \small #3
 }
+\newcommand{\liveDemo}[1]{\textbf{\href{#1}{Live Demo}}}
 
 \begin{document}
 
 \begin{center}
   {\LARGE \textbf{Aryan Choudhary}}\\
+  \vspace{2pt}
+\textbf{\small DevOps Engineer Intern $|$ Full Stack Developer $|$ Docker / Linux / Cloud}\\
   \vspace{3pt}
   \small
   Sri City, Andhra Pradesh, India $|$
@@ -44,64 +48,62 @@
   \href{https://github.com/aryanchoudhary3232}{github.com/aryanchoudhary3232}
 \end{center}
 
-\section{Professional Summary}
+\section{Summary}
 \small
-Computer Science undergraduate and full-stack developer with hands-on experience building production-style web applications using React.js, Next.js, TypeScript, Node.js, Express.js, REST APIs, Prisma ORM, PostgreSQL, MongoDB, authentication, dashboards, and AI integrations. Strong foundation in data structures, algorithms, object-oriented programming, database management systems, operating systems, and computer networks.
+Computer Science undergraduate and Software Development Intern with hands-on experience building, deploying, and debugging full-stack web applications using Linux, Git, Docker, Next.js, Node.js, Express.js, REST APIs, Prisma ORM, PostgreSQL, MongoDB, authentication, dashboards, and AI integrations. Built and deployed 2 production-style platforms with 30+ backend routes, role-based access control, background workflows, financial analytics, ATS screening, receipt scanning, and cloud deployment experience across Vercel and Render.
 
 \section{Education}
 \resumeSubheading
   {Indian Institute of Information Technology Sri City (IIIT Sri City)}
   {2023--2027}
-  {B.Tech in Computer Science and Engineering; CGPA: 8.29/10.0}
+  {B.Tech in Computer Science and Engineering; CGPA: 8.31/10.0}
   {Sri City, India}
 
-\section{Experience}
+\section{Internship}
 \resumeSubheading
   {Software Development Intern}
   {Mar 2025--May 2025}
   {E-NEST Skill, EdTech Platform}
   {Remote}
 \begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
-  \resumeItem{Built and maintained admin panel modules for course catalogs, mentor listings, exam-prep content, learner records, and platform analytics.}
-  \resumeItem{Implemented CRUD workflows, role-based access flows, form validation, searchable tables, filters, and status management for Skill Connect, Expert Connect, and Immersion Program features.}
-  \resumeItem{Integrated frontend interfaces with REST APIs and improved responsive public website pages for career pathways, mentor discovery, and dynamic program listings.}
-  \resumeItem{Collaborated on bug fixes, backend API integration, deployment support, and UI improvements across admin and consumer-facing surfaces.}
+  \resumeItem{Developed admin panel modules with CRUD operations for courses, quizzes, blogs, student enrollments, scholarships, and test quizzes.}
+  \resumeItem{Integrated REST APIs with responsive frontend pages for career pathways, mentor discovery, dynamic listings, and admin operations.}
+  \resumeItem{Built form validation, searchable tables, filters, status management, and production debugging workflows to improve content management reliability.}
+  \resumeItem{Collaborated in a real-company development workflow using Git, API testing, issue debugging, deployment support, and frontend-backend integration.}
 \end{itemize}
 
 \section{Projects}
 \resumeProject
   {Job Portal - Full-Stack Recruitment Platform}
   {Next.js, TypeScript, React, Redux Toolkit, Node.js, Express.js, MongoDB, Prisma, JWT, OAuth, Docker}
-  {\href{https://job-portal-frontend-bhkj.onrender.com}{Live Demo}}
+  {\liveDemo{https://job-portal-frontend-bhkj.onrender.com}}
 \begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
-  \resumeItem{Built a full-stack recruitment platform with separate student, recruiter, staff, and admin dashboards for job search, job posting, applications, recruiter verification, and hiring analytics.}
-  \resumeItem{Designed a microservices-style backend with API gateway, auth service, user service, job service, application service, and admin service using Node.js, Express.js, REST APIs, Zod validation, and role-based authorization.}
-  \resumeItem{Implemented authentication workflows with JWT, Google OAuth, GitHub OAuth, email OTP verification, SMS OTP support, protected routes, and role-specific access control.}
-  \resumeItem{Developed application tracking features including student applications, recruiter applicant review, hiring pipeline stages, shortlisted candidates, selected candidates, rejected candidates, and staff analytics.}
-  \resumeItem{Added AI career features including resume ATS scanning, skill gap analysis, mock interview feedback, candidate ranking, job description generation, and hiring insights.}
+  \resumeItem{Engineered 4 role-based dashboards for students, recruiters, staff, and admins across job discovery, job posting, applications, recruiter verification, and analytics.}
+  \resumeItem{Built 30 REST API route handlers across API gateway, auth, user, job, application, and admin services using Node.js, Express.js, Zod, and authorization middleware.}
+  \resumeItem{Implemented JWT authentication, Google OAuth, GitHub OAuth, email OTP verification, SMS OTP support, protected routes, and role-specific access control.}
+  \resumeItem{Containerized application services with Docker and configured environment-based setup for local development and deployment on Render.}
 \end{itemize}
 
 \resumeProject
   {AI Finance Platform - Personal Finance and Budgeting Application}
   {Next.js, React, JavaScript, Tailwind CSS, Clerk, Prisma ORM, PostgreSQL, Gemini API, Inngest, ArcJet, Resend}
-  {\href{https://ai-finance-ruby.vercel.app/}{Live Demo}}
+  {\liveDemo{https://ai-finance-ruby.vercel.app/}}
 \begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
-  \resumeItem{Built an AI-powered personal finance platform for managing accounts, income, expenses, budgets, recurring transactions, transaction history, and category-wise spending analysis.}
-  \resumeItem{Implemented secure user authentication with Clerk and persistent financial data models using Prisma ORM, PostgreSQL, relational schemas, indexed queries, and server actions.}
-  \resumeItem{Created interactive dashboards with account cards, budget progress, transaction overviews, expense charts, filters, sorting, and financial trend visualization using Recharts.}
-  \resumeItem{Integrated Google Gemini API to scan receipt images, extract merchant, amount, date, description, and category data, and auto-fill transaction forms from uploaded receipt files.}
-  \resumeItem{Added production-focused features including ArcJet rate limiting, Inngest background jobs, Resend email workflows, cache revalidation, responsive UI, and Vercel deployment.}
+  \resumeItem{Developed a finance platform for accounts, income, expenses, budgets, recurring transactions, transaction history, and category-wise spending analysis.}
+  \resumeItem{Designed 4 core PostgreSQL models for users, accounts, transactions, and budgets with Prisma ORM, indexed relations, server actions, and Clerk authentication.}
+  \resumeItem{Integrated Gemini API receipt scanning to extract merchant, amount, date, description, and category data, then auto-fill transaction forms from uploaded images.}
+  \resumeItem{Added ArcJet rate limiting, Inngest background jobs, Resend email workflows, cache revalidation, and Vercel deployment.}
+  \resumeItem{Managed production environment variables, Prisma migrations, PostgreSQL configuration, API secrets, and deployment debugging for cloud release.}
 \end{itemize}
 
-\section{Technical Skills}
+\section{Skills}
 \begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
-  \resumeItem{\textbf{Languages:} C++, JavaScript, TypeScript, Python, SQL, HTML5, CSS3}
-  \resumeItem{\textbf{Frontend:} React.js, Next.js, Redux Toolkit, Tailwind CSS, Shadcn UI, Responsive Web Design}
-  \resumeItem{\textbf{Backend:} Node.js, Express.js, FastAPI, REST APIs, Microservices, Server Actions, Authentication, Authorization}
-  \resumeItem{\textbf{Databases and ORM:} PostgreSQL, MongoDB, Prisma ORM, Database Schema Design, Query Optimization}
-  \resumeItem{\textbf{Cloud and Tools:} Git, GitHub, Docker, Kubernetes, AWS, Vercel, Render, Postman, Linux, CI/CD}
-  \resumeItem{\textbf{AI and Automation:} Google Gemini API, LLM Integration, AI Resume Screening, Receipt Scanning, Background Jobs}
-  \resumeItem{\textbf{Core CS:} Data Structures and Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks}
+  \resumeItem{\textbf{Programming:} C++, JavaScript, TypeScript, Python, SQL, Bash, HTML5, CSS3, Data Structures and Algorithms, OOP}
+  \resumeItem{\textbf{Frontend:} React.js, Next.js, Redux Toolkit, Tailwind CSS, Shadcn UI, Responsive Web Design, Component-Based Architecture}
+  \resumeItem{\textbf{Backend:} Node.js, Express.js, FastAPI, REST APIs, Microservices, Server Actions, JWT, OAuth, Authentication, Authorization}
+  \resumeItem{\textbf{DevOps and Cloud:} Linux, Git, GitHub, Docker, CI/CD, AWS Fundamentals, Vercel, Render, Environment Configuration, Deployment Debugging}
+  \resumeItem{\textbf{Databases and Tools:} PostgreSQL, MongoDB, Prisma ORM, Database Schema Design, Postman, Zod, Google Gemini API, Inngest, ArcJet, Resend}
+  \resumeItem{\textbf{Learning:} Kubernetes, Helm, Terraform, Prometheus, Grafana}
 \end{itemize}
 
 \end{document}
