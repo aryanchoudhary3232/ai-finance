@@ -14,7 +14,7 @@ echo "======================================================"
 echo "[1/6] Updating system packages..."
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get install -y ca-certificates curl gnupg lsb-release ufw git fail2ban
+sudo apt-get install -y ca-certificates curl gnupg lsb-release ufw git fail2ban certbot python3-certbot-nginx
 
 # 2. Configure UFW Firewall
 echo "[2/6] Configuring UFW firewall (SSH, HTTP, HTTPS)..."

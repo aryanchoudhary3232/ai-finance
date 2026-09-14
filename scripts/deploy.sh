@@ -27,10 +27,10 @@ git pull origin main
 # 3. Apply Prisma Database Migrations
 echo "[2/5] Running Prisma database migrations..."
 if command -v npx &> /dev/null; then
-  npx prisma migrate deploy
+  npx --yes prisma@6.0.1 migrate deploy
 else
   # If running exclusively inside Docker
-  docker compose run --rm web npx prisma migrate deploy
+  docker compose run --rm web npx --yes prisma@6.0.1 migrate deploy
 fi
 
 # 4. Build and Restart Docker Containers
