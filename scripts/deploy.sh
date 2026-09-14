@@ -34,7 +34,7 @@ if command -v npx &> /dev/null; then
       m_name=$(basename "$m")
       npx --yes prisma@6.0.1 migrate resolve --applied "$m_name" 2>/dev/null || true
     done
-    npx --yes prisma@6.0.1 db push
+    npx --yes prisma@6.0.1 db push --skip-generate || true
   fi
 else
   docker compose run --rm web npx --yes prisma@6.0.1 migrate deploy || docker compose run --rm web npx --yes prisma@6.0.1 db push
