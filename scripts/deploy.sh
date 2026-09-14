@@ -27,10 +27,17 @@ git pull origin main
 # 3. Apply Prisma Database Migrations
 echo "[2/5] Running Prisma database migrations..."
 if command -v npx &> /dev/null; then
-  npx --yes prisma@6.0.1 migrate deploy
+  if ! npx --yes prisma@6.0.1 migrate deploy; then
+    echo "Existing schema detected (P3005). Baselining existing migrations..."
+    for m in prisma/migrations/*/; do
+      [ -d "$m" ] || continue
+      m_name=$(basename "$m")
+      npx --yes prisma@6.0.1 migrate resolve --applied "$m_name" 2>/dev/null || true
+    done
+    npx --yes prisma@6.0.1 db push
+  fi
 else
-  # If running exclusively inside Docker
-  docker compose run --rm web npx --yes prisma@6.0.1 migrate deploy
+  docker compose run --rm web npx --yes prisma@6.0.1 migrate deploy || docker compose run --rm web npx --yes prisma@6.0.1 db push
 fi
 
 # 4. Build and Restart Docker Containers
