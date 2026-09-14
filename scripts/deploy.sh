@@ -42,6 +42,8 @@ fi
 
 # 4. Build and Restart Docker Containers
 echo "[3/5] Building and restarting Docker containers..."
+sudo systemctl stop nginx 2>/dev/null || true
+sudo systemctl stop apache2 2>/dev/null || true
 docker compose up -d --build --remove-orphans
 
 # 5. Health Check
